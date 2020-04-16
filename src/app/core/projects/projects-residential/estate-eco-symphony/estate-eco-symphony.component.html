@@ -1,0 +1,267 @@
+<div class="row">
+  <div class="col-sm-12" id="estate-eco-page">
+    <img src="/assets/eco-enquire.png" id="eco-enquiry" (click)="scrollToSection(estateEcoSymphonyScrollLocation)">
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-12 text-center" id="estate-eco-navbar">
+    <div class="estate-eco_buttons" (click)="scrollToSection(estateEcoSymphonyScrollOverview)">Overview</div>
+    <div class="estate-eco_buttons" (click)="scrollToSection(estateEcoSymphonyScrollAmenities)">Amenities</div>
+    <div class="estate-eco_buttons" (click)="scrollToSection(estateEcoSymphonyScrollGreenFeatues)">Green Featues</div>
+    <div class="estate-eco_buttons" (click)="scrollToSection(estateEcoSymphonyScrollFloor)">Floor Plans</div>
+    <div class="estate-eco_buttons" (click)="scrollToSection(estateEcoSymphonyScrollGallery)">Gallery</div>
+    <div class="estate-eco_buttons" (click)="scrollToSection(estateEcoSymphonyScrollLocation)">Location</div>
+    <a [href]="brochure" class="brochure" download>
+      <div class="estate-eco_buttons">Download E-Brochure</div>
+    </a>
+  </div>
+</div>
+<div class="container project-info">
+  <div class="row" #estateEcoSymphonyScrollOverview>
+    <div class="col-sm-12 header-background">
+      <h3>Overview</h3>
+    </div>
+    <div class="col-sm-12 overview-section">
+      <p><b>Luxurious Sustainable Living.</b></p>
+      <p>Estate Eco Symphony is a premium residential project of 139 Flats. In Estate Eco Symphony,
+        we have combined luxury with environmental sustainability.</p>
+      <p>It is the first “Gold Rated Green Building” project of Jharkhand, and has all the modern
+        amenities you could ask for.</p>
+      <p>We have secured water for your future with comprehensive waste water recycling and
+        reuse system, 100% rain water harvesting system and many more.</p>
+    </div>
+  </div>
+  <hr>
+
+  <div class="row" #estateEcoSymphonyScrollAmenities>
+    <div class="col-sm-12 header-background">
+      <h3>Amenities</h3>
+    </div>
+    <ul class="amenities">
+      <li>75% Open Area</li>
+      <br>
+      <br>
+      <li>Open Theatre </li>
+      <br>
+      <br>
+      <li>Heated all weather swimming pool </li>
+      <br>
+      <br>
+      <li>Jacuzzi and Kids Pool</li>
+      <br>
+      <br>
+      <li>Community/Party Hall</li>
+      <br>
+      <br>
+      <li>Beautifully landscaped garden</li>
+      <br>
+      <br>
+      <li>Cafeteria and Department Store </li>
+      <br>
+      <br>
+      <li>Fully Equipped Gym </li>
+      <br>
+      <br>
+      <li>Steam Room</li>
+      <br>
+      <br>
+      <li>6 Fully furnished Guest Rooms </li>
+      <br>
+      <br>
+      <li>Badminton Court</li>
+      <br>
+      <br>
+      <li>Volleyball Court </li>
+      <br>
+      <br>
+      <li>Piped Natural Gas Connection (PNG) </li>
+      <br>
+      <br>
+      <li>Indoor Game Arena- Pool, Table Tennis, Carom</li>
+      <br>
+      <br>
+      <li>Play Pen for Infants</li>
+      <br>
+      <br>
+      <li>TV Lounge, Card Room, Library </li>
+      <br>
+      <br>
+      <li>Parlour </li>
+      <br>
+      <br>
+      <li>Comprehensive security system with complete electronic surveillance </li>
+      <br>
+      <br>
+      <li>~60,000 Sq Ft Extended Basement </li>
+    </ul>
+  </div>
+  <hr>
+
+  <div class="row" #estateEcoSymphonyScrollGreenFeatues>
+    <div class="col-sm-12 header-background">
+      <h3>Green Features</h3>
+    </div>
+    <ul class="specifications">
+      <li>Comprehensive waste water recycling and reuse system</li>
+      <br>
+      <br>
+      <li>Dual Plumbing for water reuse</li>
+      <br>
+      <br>
+      <li>Rain Water Harvesting- Roof top as well as entire ground water harvesting</li>
+      <br>
+      <br>
+      <li>~75,000 Watt Solar system for common area</li>
+      <br>
+      <br>
+      <li>Solar water heaters</li>
+      <br>
+      <br>
+      <li>Sensor based lighting</li>
+      <br>
+      <br>
+      <li>Hybrid Generator</li>
+      <br>
+      <br>
+      <li>~20% reduction in house hold electric bill</li>
+      <br>
+      <br>
+      <li>Heat resistant coating on exposed concrete surfaces</li>
+      <br>
+      <br>
+      <li>Use of reflective low e-glass</li>
+      <br>
+      <br>
+      <li>French Windows</li>
+      <br>
+      <br>
+      <li>Extensive greenery with around 80 tree plantation</li>
+      <br>
+      <br>
+      <li>Waster composter machine onsite</li>
+      <br>
+      <br>
+      <li>Optional car charging facility</li>
+      <br>
+      <br>
+      <li>Designed for differently abled</li>
+      <br>
+      <br>
+    </ul>
+  </div>
+
+  <hr>
+  <div class="row" #estateEcoSymphonyScrollFloor>
+    <div class="col-sm-12 header-background">
+      <h3>Floor Plans</h3>
+    </div>
+    <div class="col-sm-4 floor-plan-section" *ngFor="let fp of floorPlans">
+      <div class="floor-plan-container">
+        <img [src]="fp.img" class="floor-plan-img" data-toggle="modal" data-target=".bs-example-modal-lg">
+        <div class="middle" data-toggle="modal" data-target=".bs-example-modal-lg">
+          <div class="text">{{fp.details}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="row" #estateEcoSymphonyScrollGallery>
+    <div class="col-sm-12 header-background">
+      <h3>Gallery</h3>
+
+    </div>
+    <div class="col-sm-4 gallery-section" *ngFor="let gallery of gallery">
+      <img [src]="gallery" class="floor-plan-img">
+    </div>
+  </div>
+  <hr>
+
+  <div class="row" #estateEcoSymphonyScrollLocation>
+    <div class="col-sm-12 header-background">
+      <h3>Location</h3>
+    </div>
+    <div class="col-md-4 col-sm-12 project-section-info">
+      <h4>Estate Eco Symphony</h4>
+      <p>Muharram Toli</p>
+      <p>Jai Prakash Nagar</p>
+      <p>Ranchi</p>
+      <p>Jharkhand </p>
+
+      <div class="row social_row">
+
+        <div class="col-sm-12" id="social-icons">
+          <a target="_blank" href="https://www.facebook.com/estatebuildcon">
+            <i class="fab fa-facebook" id="facebook"></i>
+          </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="https://www.instagram.com/estate_buildcon/" target="_blank">
+            <i class="fab fa-instagram" id="instagram"></i>
+          </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="https://www.linkedin.com/company/estate-buildcon-pvt-ltd" target="_blank">
+            <i class="fab fa-linkedin" id="linkedin"></i>
+          </a>
+        </div>
+
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-12 project-section-maps">
+      <a href="https://www.google.com/maps/place/Estate+Eco+Symphony/@23.398329,85.3620343,17z/data=!3m1!4b1!4m5!3m4!1s0x39f4e3fab45d6c9d:0x5ee1003b412c64e7!8m2!3d23.398329!4d85.364223"
+        target="_blank">
+        <img [src]="maps" class="google-location"></a>
+    </div>
+    <div class="col-md-4 col-sm-12 project-section-form">
+      <form (ngSubmit)="onSubmitMail(formData)" #formData="ngForm">
+        <input type="text" ngModel name="fullName" class="form-control" placeholder="Full Name" required>
+        <br>
+        <input type="text" ngModel name="email" class="form-control" placeholder="Email Address" required>
+        <br>
+        <input type="text" ngModel name="phoneNumber" class="form-control" placeholder="Phone Number" required>
+        <br>
+        <input type="text" ngModel name="project" class="form-control" placeholder="Project">
+        <br>
+        <textarea ngModel name="message" class="form-control" placeholder="Query" rows="6"></textarea>
+        <br>
+        <input type="submit" class="btn btn-default form-control estate-btn" value="Submit" id="estate-contact-submit">
+        <br>
+        <br>
+        <div class="sales-enq">
+          <p>Sales Enquiry : +91 8051035526</p>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+</div>
+
+<div id="estate-footer" style="text-align: right;">
+  <span style="color: #ffff00; font-size: 10px;">© Estate Buildcon Pvt Ltd. 2016</span>
+</div>
+
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content" id="estate-modal">
+      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div [ngClass]="{active : i == 0, item : i>=0}" *ngFor="let fp of floorPlans; let i = index">
+            <img class="img-responsive" [src]="fp.img" alt="...">
+            <div class="carousel-caption">
+              {{fp.details}}
+            </div>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

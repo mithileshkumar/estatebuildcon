@@ -1,0 +1,108 @@
+<div class="container">
+  <div class="row" id="estate-map-row">
+    <div class="col-sm-12" id="map-background">
+      <a target="_blank"
+        href="https://www.google.com/maps/place/Estate+Buildcon+Pvt+Ltd/@23.3656709,85.3450633,17z/data=!3m1!4b1!4m5!3m4!1s0x39f4e179757a8c05:0x7d0c27b3cf236b1e!8m2!3d23.365666!4d85.347252"><img
+          src="/assets/estate-location.png"></a>
+    </div>
+  </div>
+
+  <div class="row" id="estate-contact-row">
+    <div class="col-sm-4">
+      <form (ngSubmit)="onSubmitMail(formData)" #formData="ngForm">
+        <input type="text" ngModel name="fullName" class="form-control" placeholder="Full Name" required>
+        <br>
+        <input type="text" ngModel name="email" class="form-control" placeholder="Email Address" required>
+        <br>
+        <input type="text" ngModel name="phoneNumber" class="form-control" placeholder="Phone Number" required>
+        <br>
+        <input type="text" ngModel name="project" class="form-control" placeholder="Project">
+        <br>
+        <textarea ngModel name="message" class="form-control" placeholder="Message" rows="6"></textarea>
+        <br>
+        <input type="submit" class="btn btn-default form-control" value="Submit" id="estate-contact-submit">
+      </form>
+
+    </div>
+
+    <div class="col-sm-2"></div>
+
+    <div class="col-sm-6" style="margin-top:50px;">
+      <div class="row">
+        <div class="col-sm-3">
+          <p>
+            <b>Corporate Address :</b>
+          </p>
+        </div>
+        <div class="col-sm-9 text-left ">
+          <p> 505, Mangal Tower,<br> Kantatoli, <br>Ranchi -834001, <br>Jharkhand, India .</p>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="col-sm-3">
+          <p>
+            <b> Site Address :</b>
+          </p>
+        </div>
+        <div class="col-sm-9 text-left ">
+          <p> Estate Eco Symphony,<br>
+            Chesshire Home Road,<br>
+            Bariatu,<br>
+            Ranchi-834009</p>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="col-sm-3">
+          <p>
+            <b>Phone Number :</b>
+          </p>
+        </div>
+        <div class="col-sm-9 text-left ">
+          <p> +91 (0) 8051035526 ; +91 (0) 6512531000</p>
+        </div>
+      </div>
+
+
+      <div class="row">
+
+        <div class="col-sm-3">
+          <p>
+            <b>Email :</b>
+          </p>
+        </div>
+        <div class="col-sm-9 text-left ">
+          <p>info@estatebuildcon.com</p>
+        </div>
+      </div>
+
+
+      <div class="row social_row">
+        <div class="col-sm-3"></div>
+
+        <div class="col-sm-6" id="social-icons">
+          <a target="_blank" href="https://www.facebook.com/estatebuildcon">
+            <i class="fab fa-facebook" id="facebook"></i>
+          </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="https://www.instagram.com/estate_buildcon/" target="_blank">
+            <i class="fab fa-instagram" id="instagram"></i>
+          </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="https://www.linkedin.com/company/estate-buildcon-pvt-ltd" target="_blank">
+            <i class="fab fa-linkedin" id="linkedin"></i>
+          </a>
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+</div>
+
+<div id="estate-footer" style="text-align: right;">
+  <span style="color: #ffff00; font-size: 10px;">© Estate Buildcon Pvt Ltd. 2016</span>
+</div>

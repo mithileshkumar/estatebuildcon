@@ -1,0 +1,67 @@
+.container-fluid {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  height: auto;
+  min-height: 90px !important;
+  margin-bottom: 0;
+}
+
+.navbar-header {
+  height: auto;
+  min-height: 100px !important;
+  padding-left: 15px;
+}
+
+.navbar-header button {
+  margin: 30px 50px;
+}
+
+.custom_nav_menu {
+  color: #671F37;
+  padding-left: 30px;
+}
+
+.custom_nav_menu:hover {
+  background: #671F37;
+  color: #ffffff;
+}
+
+.estate-navbar-active {
+  background: #671F37 !important;
+  color: #ffffff !important;
+}
+
+.icon-bar {
+  background: #671F37;
+}
+
+.navbar-toggle {
+  background: #FFFFFF;
+  border: solid #671F37;
+}
+
+@media (min-width: 768px) {
+  .navbar-nav {
+    float: none;
+    margin: 25px auto;
+    display: table;
+    table-layout: fixed;
+  }
+
+  .navbar-nav li {
+    width: 115px;
+  }
+}
+
+
+@media (max-width: 300px) {
+  #estate-brand-logo {
+    height: 40px;
+    width: 70px;
+    margin-top: 18px;
+  }
+}

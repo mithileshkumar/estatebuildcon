@@ -1,0 +1,110 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.floor-plan-img {
+  cursor: pointer;
+}
+
+.floor-plan-img:hover {
+  opacity: 0.4;
+}
+
+.project-section-maps img {
+  height: 390px;
+  box-shadow: 5px 5px 10px #dddddd;
+}
+
+.sales-enq {
+  text-align: center;
+  height: 30px;
+  width: 100%;
+  background-color: yellow;
+}
+
+.sales-enq p {
+  padding-top: 5px;
+}
+
+#estate-footer {
+  background-color: #000;
+  color: #fff;
+  padding: 15px;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.modal {
+  text-align: center;
+  padding: 0 !important;
+}
+
+.modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+
+
+.floor-plan-container {
+  position: relative;
+  border: 1px solid gray;
+  box-shadow: 4px 4px 4px #B0B0B0;
+  text-align: center;
+}
+
+.floor-plan-container .image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.floor-plan-container .middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  cursor: pointer;
+}
+
+.floor-plan-container:hover .image {
+  opacity: 0.8;
+  background-color: #000;
+}
+
+.floor-plan-container:hover .middle {
+  opacity: 1;
+}
+
+.floor-plan-container .text {
+  background-color: #671F37;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+.carousel-inner>.item>img {
+  height: 80vh;
+}
+
+#estate-modal {
+  text-align: center;
+}

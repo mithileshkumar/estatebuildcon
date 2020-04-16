@@ -1,0 +1,147 @@
+<div class="row">
+  <div class="col-sm-12" id="estate-plaza-page">
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-12 text-center" id="estate-plaza-navbar">
+    <div class="estate-plaza_buttons" (click)="scrollToSection(estatePlazaScrollOverview)">Overview</div>
+    <div class="estate-plaza_buttons" (click)="scrollToSection(estatePlazaScrollFloor)">Floor Plans</div>
+    <div class="estate-plaza_buttons" (click)="scrollToSection(estatePlazaScrollGallery)">Gallery</div>
+    <div class="estate-plaza_buttons">E-Brochure</div>
+    <div class="estate-plaza_buttons" (click)="scrollToSection(estatePlazaScrollLocation)">Location</div>
+  </div>
+</div>
+<div class="container project-info">
+  <div class="row" #estatePlazaScrollOverview>
+    <div class="col-sm-12 header-background">
+      <h3>Overview</h3>
+    </div>
+    <div class="col-sm-12 overview-section">
+      <p>Estate Plaza is an extremely attractive G+7 commercial project. With a construction area of about 1.25 Lakh
+        SqFt, Estate
+        Plaza holds 35 shops and 55 offices in various sizes which provide buyers with a variety of options according to
+        their
+        need.The building was designed by renowned Mumbai architect Prashant Sutaria. </p>
+      <p>The building looks premium and sophisticated to say the least. The project created a new benchmark in terms of
+        design
+        in the commercial market, Ranchi City. </p>
+    </div>
+  </div>
+  <hr>
+  <div class="row" #estatePlazaScrollFloor>
+    <div class="col-sm-12 header-background">
+      <h3>Floor Plans</h3>
+    </div>
+    <div class="col-sm-4 floor-plan-section" *ngFor="let fp of floorPlans">
+      <div class="floor-plan-container">
+        <img [src]="fp.img" class="floor-plan-img" data-toggle="modal" data-target=".bs-example-modal-lg">
+        <div class="middle" data-toggle="modal" data-target=".bs-example-modal-lg">
+          <div class="text">{{fp.details}}</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <hr>
+  <div class="row" #estatePlazaScrollGallery>
+    <div class="col-sm-12 header-background">
+      <h3>Gallery</h3>
+
+    </div>
+    <div class="col-sm-4 gallery-section" *ngFor="let gallery of gallery">
+      <img [src]="gallery" class="floor-plan-img">
+    </div>
+  </div>
+  <hr>
+
+  <div class="row" #estatePlazaScrollLocation>
+    <div class="col-sm-12 header-background">
+      <h3>Location</h3>
+    </div>
+    <div class="col-md-4 col-sm-12 project-section-info">
+      <h4>Estate Plaza</h4>
+      <p>Adjacent to Mangal Tower</p>
+      <p>Kantatoli</p>
+      <p>Ranchi</p>
+      <p>Jharkhand </p>
+
+      <div class="row social_row">
+
+        <div class="col-sm-12" id="social-icons">
+          <a target="_blank" href="https://www.facebook.com/estatebuildcon">
+            <i class="fab fa-facebook" id="facebook"></i>
+          </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="https://www.instagram.com/estate_buildcon/" target="_blank">
+            <i class="fab fa-instagram" id="instagram"></i>
+          </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="https://www.linkedin.com/company/estate-buildcon-pvt-ltd" target="_blank">
+            <i class="fab fa-linkedin" id="linkedin"></i>
+          </a>
+        </div>
+
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-12 project-section-maps">
+      <a href="https://www.google.co.in/maps/place/Estate+Plaza,+Kantatoli,+Ranchi,+Jharkhand+834001/@23.3627363,85.3438458,15z/data=!4m13!1m7!3m6!1s0x39f4e17925155fa9:0x17229eda2bad78d3!2sEstate+Plaza,+Kantatoli,+Ranchi,+Jharkhand+834001!3b1!8m2!3d23.3645926!4d85.3489512!3m4!1s0x39f4e17925155fa9:0x17229eda2bad78d3!8m2!3d23.3645926!4d85.3489512"
+        target="_blank">
+        <img [src]="maps" class="google-location"></a>
+    </div>
+    <div class="col-md-4 col-sm-12 project-section-form">
+      <form (ngSubmit)="onSubmitMail(formData)" #formData="ngForm">
+        <input type="text" ngModel name="fullName" class="form-control" placeholder="Full Name" required>
+        <br>
+        <input type="text" ngModel name="email" class="form-control" placeholder="Email Address" required>
+        <br>
+        <input type="text" ngModel name="phoneNumber" class="form-control" placeholder="Phone Number" required>
+        <br>
+        <input type="text" ngModel name="project" class="form-control" placeholder="Project">
+        <br>
+        <textarea ngModel name="message" class="form-control" placeholder="Query" rows="6"></textarea>
+        <br>
+        <input type="submit" class="btn btn-default form-control estate-btn" value="Submit" id="estate-contact-submit">
+        <br>
+        <br>
+        <div class="sales-enq">
+          <p>Sales Enquiry : +91 8051035526</p>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+</div>
+
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div [ngClass]="{active : i == 0, item : i>=0}" *ngFor="let fp of floorPlans; let i = index">
+            <img class="img-responsive" [src]="fp.img" alt="...">
+            <div class="carousel-caption">
+              {{fp.details}}
+            </div>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="estate-footer" style="text-align: right;">
+  <span style="color: #ffff00; font-size: 10px;">© Estate Buildcon Pvt Ltd. 2016</span>
+</div>

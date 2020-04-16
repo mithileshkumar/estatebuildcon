@@ -1,0 +1,144 @@
+h6 {
+  color: #671F37;
+}
+
+.header-background {
+  background: #671F37;
+  color: #ffffff;
+}
+
+#green-residency-page {
+  background: url("/assets/home_images/green_residency.jpg");
+  background-size: 100% 400px;
+}
+
+#green-residency-page {
+  height: 400px;
+}
+
+#green-residency-navbar {
+  background: #333333;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+}
+
+.green-residency_buttons {
+  width: 200px;
+  color: #ffffff;
+  padding-top: 15px;
+  cursor: pointer;
+}
+
+.green-residency_buttons:hover {
+  background: #671F37;
+  color: #ffffff;
+}
+
+.green-residency:hover {
+  background: #671F37;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.green-residency-active {
+  background: #671F37;
+}
+
+.floor-plan-img {
+  width: 80%;
+  height: 200px;
+}
+
+.project-info {
+  margin-top: 20px;
+}
+
+.project-section-maps,
+.project-section-form,
+.project-section-info,
+.gallery-section,
+.floor-plan-section,
+.overview-section {
+  padding: 20px;
+}
+
+.project-section-maps img {
+  height: 390px;
+  box-shadow: 5px 5px 10px #dddddd;
+}
+
+form {
+  padding: 20px;
+  background: #dddddd;
+  box-sizing: border-box;
+}
+
+.estate-btn {
+  background: #671F37;
+  color: #ffffff;
+}
+
+.google-location {
+  width: 100%;
+}
+
+
+i {
+  font-size: 2rem;
+}
+
+#facebook {
+
+  color: #3E5B9A;
+}
+
+#instagram {
+
+  color: transparent;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+#linkedin {
+  color: #0077B5;
+}
+
+.social_row i {
+  font-size: 40px;
+}
+
+.amenities {
+  margin-top: 80px;
+}
+
+.amenities li {
+  font-weight: bolder;
+  list-style-type: circle;
+}
+
+.specifications span {
+  font-weight: normal;
+}
+
+.specifications {
+  margin-top: 80px;
+}
+
+.specifications li {
+  font-weight: bolder;
+  list-style-type: circle;
+}
+
+.sales-enq {
+  text-align: center;
+  height: 30px;
+  width: 100%;
+  background-color: yellow;
+}
+
+.sales-enq p {
+  padding-top: 5px;
+}

@@ -1,0 +1,28 @@
+<div class="row team_row">
+  <div class="col-lg-4 text-center" *ngFor="let person of team">
+
+      <!--<div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="/assets/default.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{person.name}}}</h5>
+          </div>
+        </div> -->
+
+        <div class="row">
+          <div class="col-sm-12">
+              <img height="120" width="120"  class="rounded-circle" src="/assets/default.jpg" alt="Card image cap">
+          </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+              <hr>
+             <b>{{person.name}}</b>
+             <br>
+             {{person.designation}}
+            </div>
+          </div>
+          <br>
+
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="row joint_row">
+  <div class="col-lg-4 col-sm-6 col-xs-12 joint_col" *ngFor="let project of jointVentures">
+    <div class="card joint_card">
+      <a routerLink="/{{project.route_name}}">
+        <img class="card-img-top" src="{{project.image}}" alt="Card image">
+        <div class="card-body">
+          <h4 class="card-title text-center"><b>{{project.name}}</b></h4>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

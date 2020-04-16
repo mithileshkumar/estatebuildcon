@@ -1,0 +1,30 @@
+#about-us_background {
+    background: url('/assets/about-us.jpg');
+    height: 200px;
+}
+
+#about-us_navbar {
+    background: #333333;
+    display: flex;
+    height: 50px;
+    justify-content: center;
+}
+
+#about-us_container {
+    margin-top: 20px;
+}
+
+.about-us_buttons {
+    width: 200px;
+    color: #ffffff;
+    padding-top: 15px;
+}
+.about-us_buttons:hover {
+    background: #671F37;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.estate-about-active {
+    background: #671F37;
+}

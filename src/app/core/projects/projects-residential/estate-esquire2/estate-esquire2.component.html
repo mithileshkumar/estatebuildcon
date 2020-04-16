@@ -1,0 +1,209 @@
+<div class="row">
+  <div class="col-sm-12" id="estate_esquire2-page">
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-12 text-center" id="estate_esquire2-navbar">
+    <div class="estate_esquire2_buttons" (click)="scrollToSection(estateEsquire2ScrollOverview)">Overview</div>
+    <div class="estate_esquire2_buttons" (click)="scrollToSection(estateEsquire2ScrollAmenities)">Amenities</div>
+    <div class="estate_esquire2_buttons" (click)="scrollToSection(estateEsquire2ScrollSpecifications)">Specifications
+    </div>
+    <div class="estate_esquire2_buttons" (click)="scrollToSection(estateEsquire2ScrollFloor)">Floor Plans</div>
+    <div class="estate_esquire2_buttons" (click)="scrollToSection(estateEsquire2ScrollGallery)">Gallery</div>
+    <div class="estate_esquire2_buttons">E-Brochure</div>
+    <div class="estate_esquire2_buttons" (click)="scrollToSection(estateEsquire2ScrollLocation)">Location</div>
+  </div>
+</div>
+<div class="container project-info">
+  <div class="row" #estateEsquire2ScrollOverview>
+    <div class="col-sm-12 header-background">
+      <h3>Overview</h3>
+    </div>
+    <div class="col-sm-12 overview-section">
+      <p>Estate Esquire II is a smaller replica of the splendor of Estate Esquire I. The apartment has 32 3-BHK flats,
+        each of approx 1580 Sq ft. </p>
+    </div>
+  </div>
+  <hr>
+
+  <div class="row" #estateEsquire2ScrollAmenities>
+    <div class="col-sm-12 header-background">
+      <h3>Amenities</h3>
+    </div>
+    <ul class="amenities">
+      <li> Community hall - 3100 sq. ft. </li>
+      <br>
+      <br>
+      <li> Intercom </li>
+      <br>
+      <br>
+      <li>24hrs. Generator </li>
+      <br>
+      <br>
+      <li>Security </li>
+      <br>
+      <br>
+      <li>Overhead water tank fitted with sensor for automatic filling</li>
+    </ul>
+  </div>
+  <hr>
+
+  <div class="row" #estateEsquire2ScrollSpecifications>
+    <div class="col-sm-12 header-background">
+      <h3>Specifications</h3>
+    </div>
+    <ul class="specifications">
+      <li> Floor<br>
+        <span>All rooms, balconies, passage and bathroom finished with vitrified/ceramic/anti-skid tiles and three
+          inches skirting.</span>
+      </li>
+      <br>
+      <br>
+      <li>Structure<br>
+        <span>Building with earthquake resistant R.C.C. structure. Exclusive use of TATA TISCON FE 500 steel bars only.
+        </span>
+      </li>
+      <br>
+      <br>
+      <li> Kitchen <br>
+        <span> Granite working platform and ceramic tiles in dado upto 24" height over the platform. Stainless steel
+          sink with opening for exhaust fan.</span>
+
+      </li>
+      <br>
+      <br>
+      <li>Door <br>
+        <span> Flush doors with salwood frame. </span>
+      </li>
+      <br>
+      <br>
+      <li>Windows <br>
+        <span>3 way glazed aluminium windows with net & MS safety grills.</span>
+      </li>
+      <br>
+      <br>
+      <li>Water Supply <br>
+        <span> 24 hours water supply from own deep tube well boring, to be stored in over-head water tanks. </span>
+      </li>
+      <br>
+      <br>
+      <li>Telephone and T.V. <br>
+        <span>One telephone line point, and one T.V. cable point provided in living room and master bedroom.</span>
+      </li>
+      <br>
+      <br>
+      <li>Lift<br>
+        <span> 8 passenger automatic lift with stainless steel finish (2 in each block). </span>
+      </li>
+      <br>
+      <br>
+      <li>Exterior Finish<br>
+        <span> Acrylic weather proof paint for exterior finish.</span>
+      </li>
+      <br>
+      <br>
+      <li>Fire fighting System<br>
+        <span> With security features.</span>
+      </li>
+      <br>
+      <br>
+      <li> Floor Height <br>
+        <span>10'6" (finishing 10').</span>
+      </li>
+      <br>
+      <br>
+      <li>A/C<br>
+        <span> Provision for AC in all rooms. </span>
+      </li>
+      <br>
+      <br>
+      <li>Stairs Landing & Steps <br>
+        <span> Green marble flooring. </span>
+      </li>
+    </ul>
+  </div>
+
+  <hr>
+
+  <div class="row" #estateEsquire2ScrollFloor>
+    <div class="col-sm-12 header-background">
+      <h3>Floor Plans</h3>
+    </div>
+    <div class="col-sm-4 floor-plan-section" *ngFor="let fp of floorPlans">
+      <img [src]="fp" class="floor-plan-img">
+    </div>
+  </div>
+  <hr>
+  <div class="row" #estateEsquire2ScrollGallery>
+    <div class="col-sm-12 header-background">
+      <h3>Gallery</h3>
+
+    </div>
+    <div class="col-sm-4 gallery-section" *ngFor="let gallery of gallery">
+      <img [src]="gallery" class="floor-plan-img">
+    </div>
+  </div>
+  <hr>
+
+  <div class="row" #estateEsquire2ScrollLocation>
+    <div class="col-sm-12 header-background">
+      <h3>Location</h3>
+    </div>
+    <div class="col-md-3 col-sm-12 project-section-info">
+      <h4>Estate Esquire II</h4>
+      <p>Cheshire Home Road</p>
+      <p>Dipatoli</p>
+      <p>Ranchi</p>
+      <p>Jharkhand </p>
+
+      <div class="row social_row">
+
+        <div class="col-sm-12" id="social-icons">
+          <a target="_blank" href="https://www.facebook.com/estatebuildcon">
+            <i class="fab fa-facebook" id="facebook"></i>
+          </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="https://www.instagram.com/estate_buildcon/" target="_blank">
+            <i class="fab fa-instagram" id="instagram"></i>
+          </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="https://www.linkedin.com/company/estate-buildcon-pvt-ltd" target="_blank">
+            <i class="fab fa-linkedin" id="linkedin"></i>
+          </a>
+        </div>
+
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-12 project-section-maps">
+      <a target="_blank"
+        href="https://www.google.co.in/maps/place/Estate+Esquire+II,+Ayodhya+Enclave,+Ranchi,+Jharkhand+834009/@23.3808478,85.3664276,14z/data=!4m5!3m4!1s0x39f4e3e82eda1e4b:0x4a9c534db15d280e!8m2!3d23.3858406!4d85.3674147">
+        <img [src]="maps" class="google-location"></a>
+    </div>
+    <div class="col-md-5 col-sm-12 project-section-form">
+      <form (ngSubmit)="onSubmitMail(formData)" #formData="ngForm">
+        <input type="text" ngModel name="fullName" class="form-control" placeholder="Full Name" required>
+        <br>
+        <input type="text" ngModel name="email" class="form-control" placeholder="Email Address" required>
+        <br>
+        <input type="text" ngModel name="phoneNumber" class="form-control" placeholder="Phone Number" required>
+        <br>
+        <input type="text" ngModel name="project" class="form-control" placeholder="Project">
+        <br>
+        <textarea ngModel name="message" class="form-control" placeholder="Query" rows="6"></textarea>
+        <br>
+        <input type="submit" class="btn btn-default form-control estate-btn" value="Submit" id="estate-contact-submit">
+        <br>
+        <br>
+        <div class="sales-enq">
+          <p>Sales Enquiry : +91 8051035526</p>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+</div>
+
+<div id="estate-footer" style="text-align: right;">
+  <span style="color: #ffff00; font-size: 10px;">© Estate Buildcon Pvt Ltd. 2016</span>
+</div>
