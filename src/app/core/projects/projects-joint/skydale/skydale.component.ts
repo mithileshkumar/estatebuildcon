@@ -7,20 +7,17 @@ import { MailService } from 'src/app/services/mail.service';
   styleUrls: ['./skydale.component.css']
 })
 export class SkydaleComponent implements OnInit {
-
+  mailMessage = '';
   floorPlans = [
-    '/assets/floor-plans/joint/skydale/1.jpg',
-    '/assets/floor-plans/joint/skydale/2.jpg',
-    '/assets/floor-plans/joint/skydale/3.jpg',
-    '/assets/floor-plans/joint/skydale/4.jpg'
+    { img: '/assets/compressed-floor-plans/joint/skydale/1.jpg', details: 'Floor Plan - 2BHK' },
+    { img: '/assets/compressed-floor-plans/joint/skydale/2.jpg', details: 'Floor Plan - 2BHK' },
+    { img: '/assets/compressed-floor-plans/joint/skydale/3.jpg', details: 'Floor Plan - 2BHK' },
+    { img: '/assets/compressed-floor-plans/joint/skydale/4.jpg', details: 'Floor Plan - 2BHK' }
 
   ];
 
   gallery = [
-    '/assets/compressed-images/skydale.jpg',
-    '/assets/compressed-images/skydale1.jpg',
-    '/assets/compressed-images/skydale2.jpg',
-    '/assets/compressed-images/skydale3.jpg'
+    '/assets/compressed-images/joint/com_skydale.jpg'
   ];
 
   maps = '/assets/google-maps-images/skydale.png';
@@ -35,6 +32,10 @@ export class SkydaleComponent implements OnInit {
   }
 
   onSubmitMail(formData) {
-    this.mail.sendMail(formData);
+    this.mail.sendMail(formData).subscribe(data => {
+      this.mailMessage = "Mail sent successfully";
+    }, err => {
+      this.mailMessage = 'Mail not sent due to some error';
+    });
   }
 }

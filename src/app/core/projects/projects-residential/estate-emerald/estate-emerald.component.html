@@ -121,7 +121,12 @@
       <h3>Floor Plans</h3>
     </div>
     <div class="col-sm-4 floor-plan-section" *ngFor="let fp of floorPlans">
-      <img [src]="fp" class="floor-plan-img">
+      <div class="floor-plan-container">
+        <img [src]="fp.img" class="floor-plan-img" data-toggle="modal" data-target=".bs-example-modal-lg">
+        <div class="middle" data-toggle="modal" data-target=".bs-example-modal-lg">
+          <div class="text">{{fp.details}}</div>
+        </div>
+      </div>
     </div>
   </div>
   <hr>
@@ -131,7 +136,7 @@
 
     </div>
     <div class="col-sm-4 gallery-section" *ngFor="let gallery of gallery">
-      <img [src]="gallery" class="floor-plan-img">
+      <img [src]="gallery" class="floor-plan-img" data-toggle="modal" data-target=".gallery-modal">
     </div>
   </div>
   <hr>
@@ -181,8 +186,7 @@
         <textarea ngModel name="message" class="form-control" placeholder="Query" rows="6"></textarea>
         <br>
         <input type="submit" class="btn btn-default form-control estate-btn" value="Submit" id="estate-contact-submit">
-        <br>
-        <br>
+        <p class="mail-message">{{mailMessage}}</p>
         <div class="sales-enq">
           <p>Sales Enquiry : +91 8051035526</p>
         </div>
@@ -195,4 +199,56 @@
 
 <div id="estate-footer" style="text-align: right;">
   <span style="color: #ffff00; font-size: 10px;">© Estate Buildcon Pvt Ltd. 2016</span>
+</div>
+
+<div class="modal fade gallery-modal" tabindex="-1" role="dialog" aria-labelledby="galleryLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div id="carousel-gallery" class="carousel slide" data-ride="carousel">
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div [ngClass]="{active : i == 0, item : i>=0}" *ngFor="let gallery of gallery; let i = index">
+            <img class="img-responsive" [src]="gallery" alt="...">
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-gallery" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#carousel-gallery" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div [ngClass]="{active : i == 0, item : i>=0}" *ngFor="let fp of floorPlans; let i = index">
+            <img class="img-responsive" [src]="fp.img" alt="...">
+            <div class="carousel-caption">
+              {{fp.details}}
+            </div>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+      </div>
+    </div>
+  </div>
 </div>

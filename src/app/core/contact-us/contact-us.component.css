@@ -1,60 +1,69 @@
 #estate-map-row {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 #estate-contact-row {
-    margin-top: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 #estate-contact-submit {
-    background: #671F37;
-    color: #ffffff;
+  background: #671F37;
+  color: #ffffff;
 }
 
 .social_row {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .social_row i {
-    font-size: 40px;
+  font-size: 40px;
 }
 
 textarea {
-    resize:none;
+  resize: none;
 }
+
 form {
-    padding:20px;
-    background: #dddddd;
+  padding: 20px;
+  background: #dddddd;
 }
+
 i {
-    font-size:2rem;
+  font-size: 2rem;
 }
+
 #facebook {
 
-    color:#3E5B9A;
+  color: #3E5B9A;
 }
+
 #instagram {
 
-    color: transparent;
+  color: transparent;
   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
   background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
   background-clip: text;
   -webkit-background-clip: text;
 }
+
 #google {
-    color : #CE4237;
+  color: #CE4237;
 }
+
 #linkedin {
-    color:#0077B5;
+  color: #0077B5;
 }
+
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
+
 .contact_maps {
-    width:100%;
-    height:20rem;
+  width: 100%;
+  height: 20rem;
 }
 
 #map-background img {
-    width: 100%;
+  width: 100%;
 }

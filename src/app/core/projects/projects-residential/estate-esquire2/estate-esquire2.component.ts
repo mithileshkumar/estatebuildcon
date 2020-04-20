@@ -7,16 +7,14 @@ import { MailService } from 'src/app/services/mail.service';
   styleUrls: ['./estate-esquire2.component.css']
 })
 export class EstateEsquire2Component implements OnInit {
-
-
+  mailMessage = '';
   floorPlans = [
-    '/assets/floor-plans/residential/estate-esquire2/1.jpg',
-    '/assets/floor-plans/residential/estate-esquire2/2.jpg'
+    { img: '/assets/compressed-floor-plans/residential/estate-esquire2/1.jpg', details: 'Floor Plan' },
+    { img: '/assets/compressed-floor-plans/residential/estate-esquire2/2.jpg', details: 'Floor Plan - Lobby' }
   ];
 
   gallery = [
-    '/assets/compressed-images/estate-esquire2.jpg',
-    '/assets/compressed-images/estate-esquire2-1.jpg'
+    '/assets/compressed-images/residential/com_estate-esquire2.jpg'
   ];
 
   maps = '/assets/google-maps-images/estate-esquire2.png';
@@ -31,6 +29,10 @@ export class EstateEsquire2Component implements OnInit {
   }
 
   onSubmitMail(formData) {
-    this.mail.sendMail(formData);
+    this.mail.sendMail(formData).subscribe(data => {
+      this.mailMessage = "Mail sent successfully";
+    }, err => {
+      this.mailMessage = 'Mail not sent due to some error';
+    });
   }
 }

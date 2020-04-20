@@ -108,3 +108,13 @@ body {
 #estate-modal {
   text-align: center;
 }
+
+.mail-message {
+  text-align: center;
+  color: #671F37;
+  padding-top: 10px;
+}
+
+#carousel-gallery .carousel-inner img {
+  width: 100%;
+}

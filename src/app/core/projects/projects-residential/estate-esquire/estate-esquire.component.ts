@@ -7,16 +7,16 @@ import { MailService } from 'src/app/services/mail.service';
   styleUrls: ['./estate-esquire.component.css']
 })
 export class EstateEsquireComponent implements OnInit {
+  mailMessage = '';
   floorPlans = [
-    '/assets/floor-plans/residential/estate-esquire/1.jpg',
-    '/assets/floor-plans/residential/estate-esquire/2.jpg',
-    '/assets/floor-plans/residential/estate-esquire/3.jpg'
+    { img: '/assets/compressed-floor-plans/residential/estate-esquire/1.jpg', details: 'Floor Plan - 2BHK' },
+    { img: '/assets/compressed-floor-plans/residential/estate-esquire/2.jpg', details: 'Floor Plan - 3BHK' },
+    { img: '/assets/compressed-floor-plans/residential/estate-esquire/3.jpg', details: 'Floor Plan - 4BHK' },
   ];
 
   gallery = [
-    '/assets/compressed-images/estate-esquire-one.jpg',
-    '/assets/compressed-images/estate-esquire-two.jpg',
-    '/assets/compressed-images/estate-esquire-three.jpg'
+    '/assets/compressed-images/residential/com_estate-esquire.jpg',
+    '/assets/compressed-images/residential/com_estate_esquire1.jpg'
   ];
 
   maps = '/assets/google-maps-images/estate-esquire.png';
@@ -31,6 +31,10 @@ export class EstateEsquireComponent implements OnInit {
   }
 
   onSubmitMail(formData) {
-    this.mail.sendMail(formData);
+    this.mail.sendMail(formData).subscribe(data => {
+      this.mailMessage = "Mail sent successfully";
+    }, err => {
+      this.mailMessage = 'Mail not sent due to some error';
+    });
   }
 }

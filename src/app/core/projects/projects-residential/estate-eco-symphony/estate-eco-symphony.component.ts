@@ -7,7 +7,7 @@ import { MailService } from 'src/app/services/mail.service';
   styleUrls: ['./estate-eco-symphony.component.css']
 })
 export class EstateEcoSymphonyComponent implements OnInit {
-
+  mailMessage = '';
   floorPlans = [
     { img: '/assets/compressed-floor-plans/residential/estate-eco-symphony/1.jpg', details: 'Site Plan & Drainage Plan' },
     { img: '/assets/compressed-floor-plans/residential/estate-eco-symphony/2.jpg', details: 'Basement Floor Plan Parking' },
@@ -40,7 +40,11 @@ export class EstateEcoSymphonyComponent implements OnInit {
   }
 
   onSubmitMail(formData) {
-    this.mail.sendMail(formData);
+    this.mail.sendMail(formData).subscribe(data => {
+      this.mailMessage = "Mail sent successfully";
+    }, err => {
+      this.mailMessage = 'Mail not sent due to some error';
+    });
   }
 
 }

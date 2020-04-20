@@ -7,7 +7,7 @@ import { MailService } from 'src/app/services/mail.service';
   styleUrls: ['./estate-plaza.component.css']
 })
 export class EstatePlazaComponent implements OnInit {
-
+  mailMessage = '';
   floorPlans = [
     { img: '/assets/compressed-floor-plans/commercial/estate-plaza/1.jpg', details: 'Site Plan & Drainage Plan' },
     { img: '/assets/compressed-floor-plans/commercial/estate-plaza/2.jpg', details: 'Basement Floor Plan Parking' },
@@ -35,7 +35,11 @@ export class EstatePlazaComponent implements OnInit {
   }
 
   onSubmitMail(formData) {
-    this.mail.sendMail(formData);
+    this.mail.sendMail(formData).subscribe(data => {
+      this.mailMessage = "Mail sent successfully";
+    }, err => {
+      this.mailMessage = 'Mail not sent due to some error';
+    });
   }
 
 }

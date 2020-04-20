@@ -7,6 +7,7 @@ import { MailService } from 'src/app/services/mail.service';
   styleUrls: ['./estate-dhanguru.component.css']
 })
 export class EstateDhanguruComponent implements OnInit {
+  mailMessage = '';
   floorPlans = [
     '/assets/floor-plans/commercial/estate-dhanguru/1.jpg',
     '/assets/floor-plans/commercial/estate-dhanguru/2.jpg'
@@ -29,7 +30,11 @@ export class EstateDhanguruComponent implements OnInit {
   }
 
   onSubmitMail(formData) {
-    this.mail.sendMail(formData);
+    this.mail.sendMail(formData).subscribe(data => {
+      this.mailMessage = "Mail sent successfully";
+    }, err => {
+      this.mailMessage = 'Mail not sent due to some error';
+    });
   }
 
 }

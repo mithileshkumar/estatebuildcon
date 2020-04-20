@@ -55,6 +55,10 @@
   .navbar-nav li {
     width: 115px;
   }
+
+  .navbar-nav li.long-nav {
+    width: 135px;
+  }
 }
 
 

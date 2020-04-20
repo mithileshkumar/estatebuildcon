@@ -7,14 +7,14 @@ import { MailService } from 'src/app/services/mail.service';
   styleUrls: ['./mangal-tower.component.css']
 })
 export class MangalTowerComponent implements OnInit {
+  mailMessage = '';
   floorPlans = [
-    '/assets/floor-plans/commercial/mangal-tower/1.jpg',
-    '/assets/floor-plans/commercial/mangal-tower/2.jpg'
-
+    { img: 'assets/compressed-floor-plans/commercial/mangal-tower/1.jpg', details: 'Ground Floor Plan' },
+    { img: 'assets/compressed-floor-plans/commercial/mangal-tower/2.jpg', details: '3rd & 4th Floor Plan' }
   ];
 
   gallery = [
-    '/assets/compressed-images/mangal_tower.jpg'
+    '/assets/compressed-images/commercial/com_mangal_tower.jpg'
   ];
 
   maps = '/assets/google-maps-images/mangal-tower.png';
@@ -29,7 +29,11 @@ export class MangalTowerComponent implements OnInit {
   }
 
   onSubmitMail(formData) {
-    this.mail.sendMail(formData);
+    this.mail.sendMail(formData).subscribe(data => {
+      this.mailMessage = "Mail sent successfully";
+    }, err => {
+      this.mailMessage = 'Mail not sent due to some error';
+    });
   }
 
 }

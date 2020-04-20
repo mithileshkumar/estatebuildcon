@@ -7,26 +7,22 @@ import { MailService } from 'src/app/services/mail.service';
   styleUrls: ['./green-view-heights.component.css']
 })
 export class GreenViewHeightsComponent implements OnInit {
-
+  mailMessage = '';
   floorPlans = [
-    '/assets/floor-plans/joint/green_view_heights/1.jpg',
-    '/assets/floor-plans/joint/green_view_heights/2.jpg',
-    '/assets/floor-plans/joint/green_view_heights/3.jpg',
-    '/assets/floor-plans/joint/green_view_heights/4.jpg',
-    '/assets/floor-plans/joint/green_view_heights/5.jpg',
-    '/assets/floor-plans/joint/green_view_heights/6.jpg',
-    '/assets/floor-plans/joint/green_view_heights/7.jpg',
-    '/assets/floor-plans/joint/green_view_heights/8.jpg',
-    '/assets/floor-plans/joint/green_view_heights/9.jpg',
+    { img: '/assets/compressed-floor-plans/joint/green-view-heights/1.jpg', details: 'Building - B' },
+    { img: '/assets/compressed-floor-plans/joint/green-view-heights/2.jpg', details: 'Building - B' },
+    { img: '/assets/compressed-floor-plans/joint/green-view-heights/3.jpg', details: 'Building - C' },
+    { img: '/assets/compressed-floor-plans/joint/green-view-heights/4.jpg', details: 'Building - C' },
+    { img: '/assets/compressed-floor-plans/joint/green-view-heights/5.jpg', details: 'Building - D' },
+    { img: '/assets/compressed-floor-plans/joint/green-view-heights/6.jpg', details: 'Building - D' },
+    { img: '/assets/compressed-floor-plans/joint/green-view-heights/7.jpg', details: 'Floor Plan' },
+    { img: '/assets/compressed-floor-plans/joint/green-view-heights/8.jpg', details: 'Floor Plan' },
+    { img: '/assets/compressed-floor-plans/joint/green-view-heights/9.jpg', details: 'Floor Plan' }
 
   ];
 
   gallery = [
-    '/assets/compressed-images/green-view-heights.jpg',
-    '/assets/compressed-images/green-view-heights1.jpg',
-    '/assets/compressed-images/green-view-heights2.jpg',
-    '/assets/compressed-images/green-view-heights3.jpg',
-    '/assets/compressed-images/green-view-heights4.jpg'
+    '/assets/compressed-images/joint/com_green_view_heights.jpg'
   ];
 
   maps = '/assets/google-maps-images/green-view-heights.png';
@@ -42,7 +38,12 @@ export class GreenViewHeightsComponent implements OnInit {
   }
 
   onSubmitMail(formData) {
-    this.mail.sendMail(formData);
+    this.mail.sendMail(formData).subscribe(data => {
+      this.mailMessage = "Mail sent successfully";
+    }, err => {
+      this.mailMessage = 'Mail not sent due to some error';
+    });
   }
+
 
 }

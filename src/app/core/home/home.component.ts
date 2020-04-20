@@ -7,12 +7,16 @@ import { MailService } from 'src/app/services/mail.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
+  mailMessage = '';
   constructor(private mail: MailService) { }
 
   ngOnInit() {
   }
   onSubmitMail(formData) {
-    this.mail.sendMail(formData);
+    this.mail.sendMail(formData).subscribe(data => {
+      this.mailMessage = "Mail sent successfully";
+    }, err => {
+      this.mailMessage = 'Mail not sent due to some error';
+    });
   }
 }

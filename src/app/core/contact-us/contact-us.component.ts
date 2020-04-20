@@ -8,13 +8,18 @@ import { MailService } from 'src/app/services/mail.service';
 })
 export class ContactUsComponent implements OnInit {
 
+  mailMessage = '';
   constructor(private mail: MailService) { }
 
   ngOnInit() {
   }
 
   onSubmitMail(formData) {
-    this.mail.sendMail(formData);
+    this.mail.sendMail(formData).subscribe(data => {
+      this.mailMessage = "Mail sent successfully";
+    }, err => {
+      this.mailMessage = 'Mail not sent due to some error';
+    });
   }
 
 }
