@@ -37,6 +37,10 @@ body {
   font-weight: normal;
 }
 
+#estate-footer span {
+  padding: 10px;
+}
+
 .modal {
   text-align: center;
   padding: 0 !important;
@@ -117,4 +121,38 @@ body {
 
 #carousel-gallery .carousel-inner img {
   width: 100%;
+}
+
+.header-background {
+  background: #671F37;
+  color: #ffffff;
+  height: 40px;
+}
+
+.header-background h3 {
+  margin-top: 8px;
+}
+
+.project-section-maps,
+.project-section-form,
+.project-section-info,
+.gallery-section,
+.floor-plan-section,
+.overview-section {
+  padding: 20px;
+}
+
+@media only screen and (max-width: 400px) {
+  .header-background h3 {
+    font-size: 18px;
+    padding-top: 10px;
+  }
+
+  .gallery-section {
+    text-align: center;
+  }
+
+  .carousel-inner>.item>img {
+    height: 40vh;
+  }
 }

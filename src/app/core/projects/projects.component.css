@@ -1,28 +1,35 @@
 #projects_background {
-    background: url('/assets/projects.jpg');
-    background-size: 100% 200px;
-    background-repeat: no-repeat;
-    height: 200px;
+  background: url('/assets/projects.jpg');
+  background-size: 100% 200px;
+  background-repeat: no-repeat;
+  height: 200px;
 }
 
 .projects_buttons {
-    width: 200px;
-    color: #ffffff;
-    padding-top: 15px;
+  width: 200px;
+  color: #ffffff;
+  padding-top: 15px;
 }
+
 .projects_buttons:hover {
-    background: #671F37;
-    color: #ffffff;
-    cursor: pointer;
+  background: #671F37;
+  color: #ffffff;
+  cursor: pointer;
 }
 
 #projects_navbar {
-    background: #333333;
-    display: flex;
-    height: 50px;
-    justify-content: center;
+  background: #333333;
+  display: flex;
+  height: 50px;
+  justify-content: center;
 }
 
 .estate-projects-active {
-    background: #671F37;
+  background: #671F37;
+}
+
+@media only screen and (max-width: 400px) {
+  #projects_navbar div {
+    font-size: 13px;
+  }
 }

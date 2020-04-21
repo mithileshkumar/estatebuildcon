@@ -2,11 +2,6 @@ h6 {
   color: #671F37;
 }
 
-.header-background {
-  background: #671F37;
-  color: #ffffff;
-}
-
 #estate-emerald-page {
   background: url("/assets/home_images/estate_emerald.jpg");
   background-size: 100% 400px;
@@ -52,15 +47,6 @@ h6 {
 
 .project-info {
   margin-top: 20px;
-}
-
-.project-section-maps,
-.project-section-form,
-.project-section-info,
-.gallery-section,
-.floor-plan-section,
-.overview-section {
-  padding: 20px;
 }
 
 .project-section-maps img {
@@ -129,4 +115,39 @@ i {
 .specifications li {
   font-weight: bolder;
   list-style-type: circle;
+}
+
+@media only screen and (max-width: 400px) {
+  #estate-emerald {
+    width: 50px;
+    height: 170px;
+  }
+
+  .estate-emerald_buttons {
+    text-align: left;
+    padding-left: 20px;
+    padding-top: 10px;
+    width: 100%;
+  }
+
+  #estate-emerald-navbar {
+    flex-direction: column;
+    height: auto;
+  }
+
+  #estate-emerald-page {
+    background-size: 100% 250px;
+  }
+
+  #estate-emerald-page {
+    height: 250px;
+  }
+
+  .specifications {
+    margin-top: 20px;
+  }
+
+  .amenities {
+    margin-top: 20px;
+  }
 }

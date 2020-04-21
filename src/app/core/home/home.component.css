@@ -67,16 +67,6 @@ h3 {
   color: #671F37;
 }
 
-@media only screen and (max-device-width: 1024px) {
-
-  .bgimg-1,
-  .bgimg-2,
-  .bgimg-3 {
-    background-attachment: scroll;
-  }
-}
-
-
 .timeline {
   position: relative;
   margin: 0px auto;
@@ -163,7 +153,7 @@ h3 {
 
 h1 {
   color: #ffffff;
-  font-size: 2rem;
+  font-size: 20px;
 }
 
 a {
@@ -224,6 +214,15 @@ form {
   height: 500px !important;
 }
 
+@media only screen and (max-device-width: 1024px) {
+
+  .bgimg-1,
+  .bgimg-2,
+  .bgimg-3 {
+    background-attachment: scroll;
+  }
+}
+
 @media only screen and (max-width: 800px) {
   .carousel-inner img {
     width: 100vw;
@@ -232,5 +231,27 @@ form {
 
   .bookings-open {
     top: 0;
+    right: -148px;
+  }
+}
+
+
+@media only screen and (max-width: 400px) {
+  .carousel-inner img {
+    width: 100vw;
+    height: 40vh !important;
+  }
+
+  #heading-major-completed {
+    font-size: 20px;
+  }
+
+  .bookings-open {
+    top: -12px;
+    right: -170px;
+  }
+
+  h1 {
+    font-size: 15px;
   }
 }

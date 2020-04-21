@@ -2,11 +2,6 @@ h6 {
   color: #671F37;
 }
 
-.header-background {
-  background: #671F37;
-  color: #ffffff;
-}
-
 #mangal-tower-page {
   background: url("/assets/home_images/mangal_tower.jpg");
   background-size: 100% 400px;
@@ -54,15 +49,6 @@ h6 {
   margin-top: 20px;
 }
 
-.project-section-maps,
-.project-section-form,
-.project-section-info,
-.gallery-section,
-.floor-plan-section,
-.overview-section {
-  padding: 20px;
-}
-
 .project-section-maps img {
   height: 390px;
 }
@@ -107,4 +93,14 @@ i {
 
 .social_row i {
   font-size: 40px;
+}
+
+@media only screen and (max-width: 400px) {
+  #mangal-tower-page {
+    background-size: 100% 250px;
+  }
+
+  #mangal-tower-page {
+    height: 250px;
+  }
 }

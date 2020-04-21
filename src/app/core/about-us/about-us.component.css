@@ -1,30 +1,38 @@
 #about-us_background {
-    background: url('/assets/about-us.jpg');
-    height: 200px;
+  background: url('/assets/about-us.jpg');
+  height: 200px;
 }
 
 #about-us_navbar {
-    background: #333333;
-    display: flex;
-    height: 50px;
-    justify-content: center;
+  background: #333333;
+  display: flex;
+  height: 50px;
+  justify-content: center;
 }
 
 #about-us_container {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .about-us_buttons {
-    width: 200px;
-    color: #ffffff;
-    padding-top: 15px;
+  width: 200px;
+  color: #ffffff;
+  padding-top: 15px;
 }
+
 .about-us_buttons:hover {
-    background: #671F37;
-    color: #ffffff;
-    cursor: pointer;
+  background: #671F37;
+  color: #ffffff;
+  cursor: pointer;
 }
 
 .estate-about-active {
-    background: #671F37;
+  background: #671F37;
+}
+
+
+@media only screen and (max-width: 400px) {
+  #about-us_navbar div {
+    font-size: 13px;
+  }
 }
