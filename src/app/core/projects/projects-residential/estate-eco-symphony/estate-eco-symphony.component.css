@@ -156,4 +156,12 @@ i {
   #estate-eco-page {
     height: 250px;
   }
+
+  .amenities {
+    margin-top: 20px;
+  }
+
+  .specifications {
+    margin-top: 20px;
+  }
 }
