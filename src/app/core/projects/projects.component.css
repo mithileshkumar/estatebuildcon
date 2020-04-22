@@ -28,7 +28,7 @@
   background: #671F37;
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 500px) {
   #projects_navbar div {
     font-size: 13px;
   }

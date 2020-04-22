@@ -129,7 +129,7 @@ i {
   padding-top: 5px;
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 500px) {
   #estate_esquire2 {
     width: 50px;
     height: 170px;
