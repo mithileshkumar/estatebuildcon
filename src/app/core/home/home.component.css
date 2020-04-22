@@ -237,13 +237,25 @@ form {
 
 
 @media only screen and (max-width: 500px) {
-  .carousel-inner img {
+  #home-page-carousel-first img {
     width: 100vw;
-    height: 40vh !important;
+    height: 300px !important;
+  }
+
+  #home-page-carousel-second img {
+    width: 100vw;
+    height: 250px !important;
   }
 
   #heading-major-completed {
     font-size: 20px;
+  }
+
+  .carousel-caption-h1 {
+    color: #ffffff;
+    font-weight: bolder;
+    font-size: 15px;
+    margin-top: 260px;
   }
 
   .bookings-open {

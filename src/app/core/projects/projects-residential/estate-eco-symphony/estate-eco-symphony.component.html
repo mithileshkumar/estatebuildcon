@@ -10,6 +10,7 @@
     <div class="estate-eco_buttons" (click)="scrollToSection(estateEcoSymphonyScrollAmenities)">Amenities</div>
     <div class="estate-eco_buttons" (click)="scrollToSection(estateEcoSymphonyScrollGreenFeatues)">Green Featues</div>
     <div class="estate-eco_buttons" (click)="scrollToSection(estateEcoSymphonyScrollFloor)">Floor Plans</div>
+    <div class="estate-eco_buttons" (click)="scrollToSection(estateEcoSymphonyScrollFloor3D)">3D Floor Plans</div>
     <div class="estate-eco_buttons" (click)="scrollToSection(estateEcoSymphonyScrollGallery)">Gallery</div>
     <div class="estate-eco_buttons" (click)="scrollToSection(estateEcoSymphonyScrollLocation)">Location</div>
     <a [href]="brochure" class="brochure" download>
@@ -166,6 +167,20 @@
     </div>
   </div>
   <hr>
+  <div class="row" #estateEcoSymphonyScrollFloor3D>
+    <div class="col-sm-12 header-background">
+      <h3>3D Floor Plans</h3>
+    </div>
+    <div class="col-sm-4 floor-plan-section" *ngFor="let fp of floorPlans3D">
+      <div class="floor-plan-container">
+        <img [src]="fp.img" class="floor-plan-img" data-toggle="modal" data-target=".floor-modal">
+        <div class="middle" data-toggle="modal" data-target=".floor-modal">
+          <div class="text">{{fp.details}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
   <div class="row" #estateEcoSymphonyScrollGallery>
     <div class="col-sm-12 header-background">
       <h3>Gallery</h3>
@@ -237,7 +252,7 @@
   <span style="color: #ffff00; font-size: 10px;">© Estate Buildcon Pvt Ltd. 2016</span>
 </div>
 
-<div class="modal fade gallery-modal" tabindex="-1" role="dialog" aria-labelledby="galleryLabel" aria-hidden="true">
+<div class="modal fade gallery-modal" tabindex="-1" role="dialog" aria-labelledby="floorLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div id="carousel-gallery" class="carousel slide" data-ride="carousel">
@@ -254,6 +269,30 @@
           <span class="glyphicon glyphicon-chevron-left"></span>
         </a>
         <a class="right carousel-control" href="#carousel-gallery" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade floor-modal" tabindex="-1" role="dialog" aria-labelledby="floorLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div id="carousel-floor" class="carousel slide" data-ride="carousel">
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div [ngClass]="{active : i == 0, item : i>=0}" *ngFor="let floor of floorPlans3D; let i = index">
+            <img class="img-responsive" [src]="floor.img" alt="...">
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-floor" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#carousel-floor" role="button" data-slide="next">
           <span class="glyphicon glyphicon-chevron-right"></span>
         </a>
       </div>
