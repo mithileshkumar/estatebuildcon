@@ -17,7 +17,6 @@ import { EstateEcoSymphonyComponent } from 'src/app/core/projects/projects-resid
 
 //joint
 import { GreenResidencyComponent } from 'src/app/core/projects/projects-joint/green-residency/green-residency.component';
-import { SkydaleComponent } from 'src/app/core/projects/projects-joint/skydale/skydale.component';
 import { GreenViewHeightsComponent } from 'src/app/core/projects/projects-joint/green-view-heights/green-view-heights.component';
 
 import { PageNotFoundComponent } from 'src/app/shared/page-not-found/page-not-found.component';
@@ -39,7 +38,6 @@ const routes: Routes = [
   { path: 'estate_emerald', component: EstateEmeraldComponent },
   { path: 'green_residency', component: GreenResidencyComponent },
   { path: 'green_view_heights', component: GreenViewHeightsComponent },
-  { path: 'skydale', component: SkydaleComponent },
   { path: '**', component: PageNotFoundComponent }
 
 ];
@@ -62,7 +60,6 @@ export const AppRoutingComponents = [
   EstateEsquire2Component,
   EstateEcoSymphonyComponent,
   GreenResidencyComponent,
-  SkydaleComponent,
   GreenViewHeightsComponent,
   EstatePlazaComponent
 ];
